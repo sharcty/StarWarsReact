@@ -2,9 +2,10 @@ import { render, screen, waitFor } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import CharacterGraph from './CharacterGraph';
 
-global.fetch = vi.fn();
+const fetch = vi.fn();
 
 class ResizeObserver {
+    callback: any;
     constructor(callback: any) {
         this.callback = callback;
     }
@@ -39,7 +40,7 @@ describe('CharacterGraph Component', () => {
         },
     ];
 
-    fetch.mockImplementation((url) => {
+    fetch.mockImplementation((url: string) => {
         if (url === 'https://swapi.dev/api/people/1/') {
             return Promise.resolve({
                 json: () => Promise.resolve(mockCharacterData),

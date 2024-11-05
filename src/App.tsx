@@ -1,4 +1,4 @@
-import { SetStateAction, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import Modal from 'react-modal';
 import Pagination from './components/Pagination/Pagination';
@@ -8,9 +8,9 @@ import CharacterGraph from './components/CharacterGraph/CharacterGraph';
 Modal.setAppElement('#root');
 
 function App() {
-  const [data, setData] = useState({});
+  const [data, setData] = useState({ count: 0, next: "", previous: "", results: [] });
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedCharacterUrl, setSelectedCharacterUrl] = useState(null);
+  const [selectedCharacterUrl, setSelectedCharacterUrl] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   //* Fetch data when the current page changes
@@ -27,7 +27,7 @@ function App() {
     fetchData();
   }, [currentPage]);
 
-  const openModal = (characterUrl: SetStateAction<null>) => {
+  const openModal = (characterUrl: string) => {
     setSelectedCharacterUrl(characterUrl);
     setIsModalOpen(true);
   };

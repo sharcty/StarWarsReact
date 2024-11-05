@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Handle, ReactFlow } from '@xyflow/react';
+import { Handle, Position, ReactFlow } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import './CharacterGraph.css';
 import { CardData } from '../../interface/CardData';
@@ -7,8 +7,9 @@ import { CardData } from '../../interface/CardData';
 //* Custom node for graph
 function CardNode({ data }: { data: CardData }) {
     //* Render placeholder img if no img found 
-    const handleError = (event: { target: { src: string; }; }) => {
-        event.target.src = 'https://starwars-visualguide.com/assets/img/placeholder.jpg';
+    const handleError = (event: React.SyntheticEvent<HTMLImageElement>) => {
+        const target = event.target as HTMLImageElement;
+        target.src = 'https://starwars-visualguide.com/assets/img/placeholder.jpg';
     };
 
     return (
@@ -19,8 +20,8 @@ function CardNode({ data }: { data: CardData }) {
                 alt={data.value}
                 onError={handleError}
             />
-            <Handle type="source" position="bottom" id="source" />
-            <Handle type="target" position="top" id="target" />
+            <Handle type="source" position={Position.Bottom} id="source" />
+            <Handle type="target" position={Position.Top} id="target" />
         </div>
     );
 }
@@ -28,7 +29,7 @@ function CardNode({ data }: { data: CardData }) {
 const CARD_NODE = 'cardNode';
 const CHARACTER = 'character';
 
-function CharacterGraph({ characterUrl }: { characterUrl: URL }) {
+function CharacterGraph({ characterUrl }: { characterUrl: string }) {
     const nodeTypes = { cardNode: CardNode };
     const [nodes, setNodes] = useState([]);
     const [edges, setEdges] = useState([]);
@@ -53,8 +54,8 @@ function CharacterGraph({ characterUrl }: { characterUrl: URL }) {
                     type: 'characters'
                 }, { x: 100, y: 0 });
 
-                const newNodes = [characterNode];
-                const newEdges = [];
+                const newNodes: any = [characterNode];
+                const newEdges: any = [];
 
                 //* Fetch film data associated with the Character
                 const filmsData = await Promise.all(characterData.films.map(fetchJson));
