@@ -1,0 +1,7 @@
+body,
+#root {
+  margin: 0;
+  overflow-x: hidden;
+  text-align: center;
+  box-sizing: border-box;
+}

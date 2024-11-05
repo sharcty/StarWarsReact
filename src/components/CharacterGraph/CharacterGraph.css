@@ -1,0 +1,66 @@
+.hero-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    background: var(--rich-black);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.hero-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 999;
+}
+
+.close-modal-button {
+    background-color: var(--orange);
+    color: var(--rich-black);
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.card-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--rich-black);
+    border: 1px solid var(--butterscotch);
+    border-radius: 8px;
+    color: var(--orange);
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    img {
+        width: 80%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    label {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+}
+
+.react-flow {
+    background-color: var(--rich-black);
+}

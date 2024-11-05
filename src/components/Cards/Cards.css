@@ -1,0 +1,83 @@
+.card {
+    border-radius: 30px;
+    background: var(--rich-black);
+    border: 2px solid var(--orange);
+    box-shadow: -5px -5px 5px var(--oxford-blue);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 78%;
+    position: relative;
+    margin-top: 1.5rem;
+
+    h3 {
+        font-family: "Orbitron", Roboto, sans-serif;
+    }
+
+    img {
+        width: 100%;
+        border-radius: 0 0 30px 30px;
+        position: relative;
+        bottom: -5px;
+    }
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    filter: drop-shadow(0 0 15px var(--oxford-blue));
+    cursor: pointer;
+}
+
+.description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+    background: rgb(7, 17, 29, 0.9);
+    color: var(--butterscotch);
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    border-radius: 30px;
+}
+
+.card:hover .description {
+    opacity: 1;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-content: space-evenly;
+    justify-items: center;
+}
+
+@media (min-width: 600px) {
+    .cards {
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+    }
+}
+
+@media (min-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+    }
+}
+
+@media (min-width: 1200px) {
+    .cards {
+        grid-template-columns: repeat(4, minmax(300px, 1fr));
+    }
+}
+
+@media (min-width: 1500px) {
+    .cards {
+        grid-template-columns: repeat(5, minmax(300px, 1fr));
+    }
+}
+
+@media (min-width: 1800px) {
+    .cards {
+        grid-template-columns: repeat(6, minmax(300px, 1fr));
+    }
+}

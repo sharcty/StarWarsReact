@@ -1,0 +1,12 @@
+:root {
+  font-family: Roboto, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--butterscotch);
+  background-color: var(--rich-black);
+
+  --rich-black: #07111d;
+  --orange: #DF7A44;
+  --oxford-blue: #05162b;
+  --butterscotch: #DB9942;
+}
