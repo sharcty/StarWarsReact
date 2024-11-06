@@ -11,8 +11,6 @@ https://sharcty.github.io/StarWarsReact/
 Follow the link to see my presentation of a project:
 https://www.loom.com/share/db190bcca42944638d693adecbcfcb4b?id=5da2e816-87e3-495c-82df-16547411bd6b
 
-![Video](https://drive.google.com/uc?export=view&id=1AfJfq6hDYfyzbuQ0qz88ZZGlpbcVZ06S)
-
 ## Screenshots
 
 ![Main page](https://drive.google.com/uc?export=view&id=1WjJkBLyHrUZGUnlRbG5hUtB0DYWdy3N5)
