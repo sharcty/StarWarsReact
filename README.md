@@ -1,50 +1,112 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# StarWars
 
-Currently, two official plugins are available:
+The goal of this project is to create a web application that allows users to explore the list of Star Wars characters along with detailed information about the starships and films associated with each character. This app utilize ReactJS for the UI and React Flow for displaying the data as a graph. Users are able to see how each character connects with different starships and films in an interactive visualization.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo
 
-## Expanding the ESLint configuration
+Follow the link to view project:
+https://sharcty.github.io/StarWarsReact/
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Follow the link to see my presentation of a project:
+https://www.loom.com/share/db190bcca42944638d693adecbcfcb4b?id=5da2e816-87e3-495c-82df-16547411bd6b
 
-- Configure the top-level `parserOptions` property like this:
+![Video](https://drive.google.com/uc?export=view&id=1AfJfq6hDYfyzbuQ0qz88ZZGlpbcVZ06S)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Screenshots
+
+![Main page](https://drive.google.com/uc?export=view&id=1WjJkBLyHrUZGUnlRbG5hUtB0DYWdy3N5)
+
+![Graph image](https://drive.google.com/uc?export=view&id=1dLfxJvT3ekuwDgzRVtHc4AiZz-E75Hgt)
+## Installation
+
+Install StarWarsReact with npm
+
+```bash
+  npm install StarWarsReact
+  cd StarWarsReact
+```
+    
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/sharcty/StarWarsReact.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Go to the project directory
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+  cd StarWarsReact
 ```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
+
+## Running Tests
+
+To run tests, run the following command
+
+```bash
+  npm run test
+```
+
+To get tests coverage, run the following command
+
+```bash
+  npm run coverage
+```
+
+## Test coverage results
+
+![Tests count](https://drive.google.com/uc?export=view&id=1rRRCQU1U8vutO-uxH3BMhHgLdDTD9F9G)
+
+![Test coverage](https://drive.google.com/uc?export=view&id=10RaY7kp4gw9tf1p2-9lLdr3o9O_JdXFi)
+## Deployment
+
+To deploy this project run
+
+```bash
+  npm run deploy
+```
+
+
+## Tech Stack
+
+**Client:** React, ReactFlow, ViTest, Vite, gh-pages
+
+
+## API Reference
+
+#### API used for getting data
+https://sw-api.starnavi.io
+
+#### Images picking from
+https://starwars-visualguide.com/#/
+
+## Color Reference
+
+| Color        | Preview                                                                 | Hex Code  |
+|--------------|-------------------------------------------------------------------------|-----------|
+| Rich Black   | ![#07111d](https://via.placeholder.com/10/07111d?text=+)               | #07111d   |
+| Oxford Blue  | ![#05162b](https://via.placeholder.com/10/05162b?text=+)               | #05162b   |
+| Orange       | ![#df7a44](https://via.placeholder.com/10/df7a44?text=+)               | #df7a44   |
+| Butterscotch | ![#db9942](https://via.placeholder.com/10/db9942?text=+)               | #db9942   |
+
+
+
+## Lessons Learned
+
+For me it was first time building React project from scratch. I was thrilled to learn more from it, even though it was challenging to start. Thanks for the opprotunity!
+
